@@ -4,13 +4,14 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SeleniumIntroduction {
     public static void main(String[] args) throws InterruptedException {
-        // loginScenario();
+        loginScenario();
         // incorrectPasswordScenario();
-        loginForgotPasswordScenario();
+        // loginForgotPasswordScenario();
     }
 
     public static void loginScenario() throws InterruptedException{
@@ -26,7 +27,11 @@ public class SeleniumIntroduction {
 
             //input field username
         //CSS Selector
-        driver.findElement(By.cssSelector("#inputUsername")).sendKeys("maissy1");
+        // driver.findElement(By.cssSelector("#inputUsername")).sendKeys("maissy1");
+        
+            //pakai web element
+        WebElement userName = driver.findElement(By.cssSelector("#inputUsername"));
+        userName.sendKeys("maissy1");
         
         Thread.sleep(1000); 
 
@@ -40,8 +45,14 @@ public class SeleniumIntroduction {
         Thread.sleep(2000); 
 
             //klik button login
-        driver.findElement(By.className("submit")).click();
+        // driver.findElement(By.className("submit")).click();
         Thread.sleep(2000); 
+
+            //untuk menyimpan hasil dari locator, mencari posisi element
+        WebElement signInBtn = driver.findElement(By.className("submit"));
+        signInBtn.click();
+        System.out.println("Data Sign In : " + signInBtn);
+
 
             //Verifikasi berhasil login
         String successLogin = driver.findElement(By.xpath("//p[normalize-space()='You are successfully logged in.']")).getText();
