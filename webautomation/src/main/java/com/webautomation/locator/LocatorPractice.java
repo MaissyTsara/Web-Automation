@@ -1,6 +1,7 @@
 package com.webautomation.locator;
 
 import java.time.Duration;
+<<<<<<< HEAD
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -8,6 +9,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+=======
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+>>>>>>> f34e24e6bd4fd3ca8f92a815640937136da626ec
 
 public class LocatorPractice {
 
@@ -16,7 +22,10 @@ public class LocatorPractice {
         //Setting chrome drivernya
         System.setProperty("webdriver.chrome.driver", "D:/QA/COURSE/Learn After Office Bootcamp/Bootcamp Automation/Web Automation/chromedriver.exe");
 
+<<<<<<< HEAD
         //untuk mencari locator, mencari posisi element itu di dalam suatu web
+=======
+>>>>>>> f34e24e6bd4fd3ca8f92a815640937136da626ec
         WebDriver driver = new ChromeDriver();
         //akses webnya
         driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
@@ -24,6 +33,7 @@ public class LocatorPractice {
 
         Thread.sleep(1000);       
         
+<<<<<<< HEAD
         /*
          * Select currency
          * condition : dropdown
@@ -117,6 +127,9 @@ public class LocatorPractice {
         Thread.sleep(1000);
 
         driver.quit();
+=======
+        driver.close();
+>>>>>>> f34e24e6bd4fd3ca8f92a815640937136da626ec
         
     }
 
