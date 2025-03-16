@@ -166,7 +166,7 @@ public class LocatorPractice {
                 break;
             }
         }
-        Thread.sleep(1000); 
+        Thread.sleep(3000); 
         
         //handle radio button
         // driver.findElement(By.xpath("(//input[@id='ctl00_mainContent_rbtnl_Trip_0'])[1]")).click();
